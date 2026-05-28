@@ -13,8 +13,7 @@ Feature: Login functionality
     And user clicks on save button
     And user insert invalid credential1
 
-#    And user edit an existing username
-#    And user introduce text in Usernamefield
+
 
 
   Scenario: Invalid login functionality
