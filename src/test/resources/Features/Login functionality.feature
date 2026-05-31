@@ -14,8 +14,6 @@ Feature: Login functionality
     And user inserts invalid credential1
 
 
-
-
   Scenario: Invalid login functionality
     Given user inserts username"Admin1"
     And user inserts password"admin123"
@@ -35,3 +33,6 @@ Feature: Login functionality
     When user clicks on Login button
     Then user is redirected to homepage
     And user clicks on logout button
+
+
+//Scenario: 
