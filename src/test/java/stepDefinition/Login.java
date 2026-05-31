@@ -26,7 +26,7 @@ public class Login extends AbstractStepDef {
         saveData(USERNAME, nume);
     }
 
-    @And("user insert password{string}")
+    @And("user inserts password{string}")
     public void userInsertpassword(String pass) throws InterruptedException {
         sendKey(logingPage.getPasswordField(), "admin123");
         isDisplayed(logingPage.getLoginLogo());
@@ -40,19 +40,19 @@ public class Login extends AbstractStepDef {
         waitUntil(1);
     }
 
-    @Then("user click on Admin page")
+    @Then("user clicks on Admin page")
     public void userIsRedirectedToHomepage1() {
         click(homepage.getAdminButton(), 2);
         waitUntil(3);
         Assert.assertEquals("Admin", homepage.getAdminButton().getText());
     }
-    @And ("user click on Username")
+    @And ("user clicks on Username")
     public void Username() {
         sendKey(homepage.getUsername(), "Admin");
         waitUntil(3);
     }
 
-    @And("user click on search Button")
+    @And("user clicks on search Button")
     public void searchButton(){
         click(homepage.getSearchButton(), 1);
         waitUntil(2);
@@ -75,7 +75,7 @@ public class Login extends AbstractStepDef {
         waitUntil(4);
     }
 
-    @And("user insert invalid credentials")
+    @And("user inserts invalid credentials")
     public void userInvalidCredential() {
         waitUntil(2);
         Assert.assertEquals("Invalid credentials",logingPage.getInvalidCredentials().getText());
@@ -93,7 +93,7 @@ public class Login extends AbstractStepDef {
         waitUntil(3);
         sendKey(logingPage.getPasswordField(), getData(PASSWORD).toString());
     }
-    @And("user edit needed information")
+    @And("user edits needed information")
     public void editMessage() {
         click(homepage.getEditButton(),1);
         waitUntil(2);
@@ -109,7 +109,7 @@ public class Login extends AbstractStepDef {
         waitUntil(2);
     }
 
-    @And("user insert invalid credential1")
+    @And("user inserts invalid credential1")
     public void userInvalidCredential1() {
         Assert.assertEquals("Invalid",logingPage.getInvalid().getText());
         waitUntil(2);
