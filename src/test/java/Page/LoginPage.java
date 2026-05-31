@@ -18,6 +18,7 @@ public class LoginPage extends AbstractPage {
 
     @FindBy(xpath = "//p[text()='Invalid credentials']")
     private WebElement invalidCredentials;
+    
     @FindBy(xpath = "//img[@alt='company-branding']")
     private WebElement loginLogo;
 
